@@ -1,0 +1,131 @@
+:root{
+
+
+    --Red: hsl(0, 78%, 62%);
+ --Cyan: hsl(180, 62%, 55%);
+ --Orange: hsl(34, 97%, 64%);
+ --Blue: hsl(212, 86%, 64%);
+ 
+ --Very-Dark-Blue: hsl(234, 12%, 34%);
+ --Grayish-Blue: hsl(229, 6%, 66%);
+ --Very-Light-Gray: hsl(0, 0%, 98%);
+ }
+ body{
+ 
+     font-size: 0.94rem ;
+     padding: 0;
+     margin: 0;
+ }
+ section{
+padding-left: 3em;
+padding-right: 3em;
+ }
+
+ .Main-container{
+ 
+     display: grid;
+ grid-template-rows: repeat(3,1fr);
+ gap: 20px;
+ padding: 3em;
+ 
+ }
+ .Main-container>div{
+ 
+    background-color: white;
+ 
+    box-shadow: 0 1px 1px hsla(0deg, 100%, 38%, 0.075),
+    
+  0 3px 6px hsl(0deg 0% 0% / 0.075),
+    
+  0 3px 6px hsl(0deg 0% 0% / 0.075),
+  0 3px 6px hsl(0deg 0% 0% / 0.075),
+  0 3px 6px hsl(0deg 0% 0% / 0.075);
+  
+    padding: 1em;
+  
+ }
+ div>picture{
+ 
+     display: grid;
+   
+     justify-content: right;
+     margin-top: 3em
+    }
+ 
+ p{ 
+     color: var(--Grayish-Blue);
+ }
+ .CardOne{
+ border-top: 4px solid var(--Cyan);
+ border-radius: .4rem;
+
+ width: 20em;
+ }
+ .CardTwo{
+     border-top: 4px solid var(--Red);
+     border-radius: .4rem;
+     width: 20em;
+     }
+     .CardThree{
+         border-top: 4px solid var(--Orange);
+         border-radius: .4rem;
+         width: 20em;
+         }
+         .CardFour{
+             border-top: 4px solid var(--Blue);
+             border-radius: .4rem;
+             width: 20em;
+             }
+ 
+   @media screen and (min-width:700px) {
+
+  
+    
+    .Main-container{
+ 
+        display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 20px;
+    padding: .1em;
+    max-width: 100%;
+
+    
+    }
+
+    .CardOne{
+        border-top: 4px solid var(--Cyan);
+        border-radius: .4rem;
+grid-column: 2;
+grid-row: 2 /span 3;
+align-self: center;
+
+        
+        }
+    .CardTwo{
+        border-top: 4px solid var(--Red);
+        border-radius: .4rem;
+        grid-column: 3;
+        grid-row: 2;
+   
+        }
+        
+        .CardThree{
+            border-top: 4px solid var(--Orange);
+            border-radius: .4rem;
+            grid-column: 3;
+            grid-row: 3;
+            }
+            .CardFour{
+                border-top: 4px solid var(--Blue);
+                border-radius: .4rem;
+                border-radius: .4rem;
+                grid-column: 4;
+                grid-row: 2/span 3;
+                align-self: center;
+                }
+                section{
+
+                    grid-row: 1;
+                    grid-column: 3;
+                }
+   }
